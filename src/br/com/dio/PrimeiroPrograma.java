@@ -3,13 +3,14 @@ package br.com.dio;
 import br.com.dio.model.Gato;
 
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class PrimeiroPrograma {
     public static void main(String[] args) {
         Gato gato = new Gato();
         System.out.println(gato);
 
-        Livro livro1 = new Livro();
+        Livro livro1 = new Livro("HP 7",300);
         System.out.println(livro1);
         
         /*int a, b;
@@ -22,6 +23,11 @@ public class PrimeiroPrograma {
 class Livro {
     private String nome;
     private Integer numPaginas;
+
+    public Livro(String nome, Integer numPaginas){
+        this.nome = nome;
+        this.numPaginas= numPaginas;
+    }
 
     public String getNome() {
         return nome;
